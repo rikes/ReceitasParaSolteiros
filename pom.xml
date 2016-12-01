@@ -5,6 +5,14 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>RPS</name>
+			<!-- Sonar -->
+		<sonar.host.url>https://sonarqube.com</sonar.host.url>		
+		<sonar.login>cb52a32e563ea6be31e52f064dea36a04ca9d155</sonar.login>
+        	
+		
+		<!-- Codificacao -->
+        	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   <!-- Repositorios -->
 	<repositories>
 		<!-- Primefaces -->
@@ -91,5 +99,8 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+		<build>
+		<finalName>ReceitasParaSolteiros</finalName>
+	</build>
   
 </project>
