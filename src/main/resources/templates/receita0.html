@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Receita</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/geral.css" rel="stylesheet" media="all" />
+<script type="text/javascript" src="js/login.js"></script>
+<link rel="icon" type="image/png" href="img/Mt-cookbook.png" />
+</head>
+
+<body onLoad="dataGet();">
+	<header>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="inicio-user.html"> <img class="logo" src="img/Mt-cookbook.png"
+						alt="Receitas para Solteiros">
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="inicio-user.html">Receitas para Solteiros</a></li>
+						<li><a href="cadastrar-receita.html">Cadastrar Receitas</a></li>
+						<li><a href="minhas-receitas.html">Minhas
+								Receitas</a></li>
+						<li><a href="fale-conosco0.html">Fale Conosco</a></li>
+						<li><a href="sobre-nos0.html">Sobre nós</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a id="user"> <span class="glyphicon glyphicon-user"></span>
+								Usuário
+						</a></li>
+						<li><a href="inicio.html"><span
+								class="glyphicon glyphicon-log-out"></span> sair </a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+<section>
+		<div class="container-fluid text-center">
+			<div class="row content">
+				<div class="col-sm-10 text-left">
+					<h1>Bem vindo</h1>
+					<p></p>
+					<hr>
+					<h3>Faça receitas com ingredientes que você possui em sua casa</h3>
+					<p>Digite os ingredientes separados por ponto e virgula ;</p>
+
+					<form method="post" action="resultado-user.html">
+						<div>
+							<input id=input-pesquisa type="text" name="ingredientes"
+								placeholder="Ingredientes " required />
+							<button type="submit" id="btn-pesquisa">Buscar</button>
+							<br />
+						</div>
+					</form>
+				</div>
+			</div>
+			<br/>
+			<div class="texto-simples container">
+				<div class="box-imagem">
+					<h2>Bolo de Cenoura</h2><br/>
+					<figure><img class="foto" src="img/receita-teste.png" alt="Receita"/></figure>
+					<h3>Ingredientes</h3><br/>
+					<h3>Modo de preparo</h3><br/>
+										
+				</div>
+			</div>			
+			<br />
+			
+		</div>
+	</section>
+
+
+	<footer>
+		<div>
+			<h3>Conecte-se conosco</h3>
+		</div>
+		<div>
+			<nav>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Linkedin</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="footer-copyright">
+			<small> Direitos Reservados 2016 </small>
+		</div>
+	</footer>
+</body>
+
+</html>

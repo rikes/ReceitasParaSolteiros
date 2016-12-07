@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cadastrar Receita</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/geral.css" rel="stylesheet" media="all" />
+<script type="text/javascript" src="js/login.js"></script>
+<link rel="icon" type="image/png" href="img/Mt-cookbook.png" />
+</head>
+
+<body onLoad="dataGet(); addIng();">
+	<header>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="inicio-user.html"> <img class="logo" src="img/Mt-cookbook.png"
+						alt="Receitas para Solteiros">
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="inicio-user.html">Receitas para Solteiros</a></li>
+						<li class="active"><a href="cadastrar-receita.html">Cadastrar
+								Receitas</a></li>
+						<li><a href="minhas-receitas.html">Minhas Receitas</a></li>
+						<li><a href="fale-conosco0.html">Fale Conosco</a></li>
+						<li><a href="sobre-nos0.html">Sobre nós</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a id="user"> <span class="glyphicon glyphicon-user"></span>
+								Usuário
+						</a></li>
+						<li><a href="inicio.html"><span
+								class="glyphicon glyphicon-log-out"></span> sair </a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section>
+		<div class="container-fluid">
+			<div>
+				<h1>Cadastrar uma nova Receita</h1>
+			</div>
+			<form method="post" onsubmit="" name="formLogin">
+				<div class="text-left">
+					<div class="container">
+						<label><b>Nome da Receita</b></label><br /> <input type="text"
+							name="name" placeholder="Nome" required>
+					</div>
+
+					<div class="container">
+						<label><b>E-mail para contato</b></label><br /> <input
+							type="text" placeholder="E-mail" name="email"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+							onblur="validaEmail();" required>
+					</div>
+
+					<div class="container">
+						<label><b>Ingredientes</b></label><br />
+						<textarea id="ingredients"
+							placeholder="Separe os ingredientes com ';'..."></textarea>
+					</div>
+
+					<div class="container">
+						<label><b>Modo de Preparo</b></label><br />
+						<textarea id="prepare" placeholder="Modo de Preparo..."></textarea>
+					</div>
+
+					<div class="container">
+						<label><b>Primeira Categoria</b></label><br /> <select>
+							<option value="entrada">Entrada</option>
+							<option value="lanche">Lanche</option>
+							<option value="pratop">Prato Principal</option>
+							<option value="sobremesa">Sobremesa</option>
+						</select>
+					</div>
+					<div class="container">
+						<label>Insira a imagem</label>
+					</div>
+
+					<div class="container">
+						<button type="submit">Salvar Nova Receita</button>
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="container-fluid">
+			<div>
+				<h3>Conecte-se conosco</h3>
+			</div>
+			<div>
+				<nav>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Linkedin</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer-copyright">
+				<small> Direitos Reservados 2016 </small>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
