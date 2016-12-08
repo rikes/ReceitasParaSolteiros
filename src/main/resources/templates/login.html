@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
 <title>Login</title>
@@ -16,15 +17,15 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a href="inicio-user.html"> <img class="logo" src="img/Mt-cookbook.png"
-						alt="Receitas para Solteiros">
+					<a href="user/inicio-user.html"> <img class="logo" src="img/Mt-cookbook.png"
+														  alt="Receitas para Solteiros">
 					</a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="inicio.html">Receitas para Solteiros</a></li>
 						<li><a href="cadastro.html">Cadastro</a></li>
-						<li><a href="minhas-receitas.html">Minhas Receitas</a></li>
+						<li><a href="user/minhas-receitas.html">Minhas Receitas</a></li>
 						<li><a href="fale-conosco.html">Fale Conosco</a></li>
 						<li><a href="sobre-nos.html">Sobre nós</a></li>
 					</ul>
@@ -45,8 +46,14 @@
 			<div>
 				<h1>Entrar</h1>
 			</div>
-			<form method="post" onsubmit="" name="formLogin"
-				action="inicio-user.html">
+			<div th:if="${param.error}">
+				Invalid username and password.
+			</div>
+			<div th:if="${param.logout}">
+				You have been logged out.
+			</div>
+			<form method="post"  name="formLogin"
+				  th:action="@{/login}">
 				<div class="text-left">
 					<div class="container">
 						<label><b>E-mail</b></label><br /> <input type="text"

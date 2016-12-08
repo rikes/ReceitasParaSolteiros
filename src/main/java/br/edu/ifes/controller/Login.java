@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Login {
-    @RequestMapping("/login")
+    @RequestMapping("/index")
     public String index() {
         return "Login Carai!!";
     }

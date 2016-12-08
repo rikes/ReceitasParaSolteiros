@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Minhas Receitas</title>
+<title>Receita</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -11,29 +11,29 @@
 <link rel="icon" type="image/png" href="img/Mt-cookbook.png" />
 </head>
 
-<body onLoad="dataGet(); ">
+<body onLoad="dataGet();">
 	<header>
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href="inicio-user.html"> <img class="logo" src="img/Mt-cookbook.png"
-						alt="Receitas para Solteiros">
+													 alt="Receitas para Solteiros">
 					</a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="inicio-user.html">Receitas para Solteiros</a></li>
 						<li><a href="cadastrar-receita.html">Cadastrar Receitas</a></li>
-						<li class="active"><a href="minhas-receitas.html">Minhas
+						<li><a href="minhas-receitas.html">Minhas
 								Receitas</a></li>
-						<li><a href="fale-conosco0.html">Fale Conosco</a></li>
-						<li><a href="sobre-nos0.html">Sobre nós</a></li>
+						<li><a href="fale-conosco.html">Fale Conosco</a></li>
+						<li><a href="sobre-nos.html">Sobre nós</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a id="user"> <span class="glyphicon glyphicon-user"></span>
 								Usuário
 						</a></li>
-						<li><a href="inicio.html"><span
+						<li><a href="../inicio.html"><span
 								class="glyphicon glyphicon-log-out"></span> sair </a></li>
 					</ul>
 				</div>
@@ -41,34 +41,41 @@
 		</nav>
 	</header>
 
-	<section>
-		<div class="container-fluid">
-			<div>
-				<h1>Minhas Receitas</h1>
-			</div>
-			<form method="post" onsubmit="" name="formLogin">
-				<div class="text-left">
+<section>
+		<div class="container-fluid text-center">
+			<div class="row content">
+				<div class="col-sm-10 text-left">
+					<h1>Bem vindo</h1>
+					<p></p>
+					<hr>
+					<h3>Faça receitas com ingredientes que você possui em sua casa</h3>
+					<p>Digite os ingredientes separados por ponto e virgula ;</p>
 
-					<div class="container">
-					<table>
-							<tr>
-								<th>Receita</th>
-								<th>Atualizar</th>
-								<th>Remover</th>
-							</tr>
-							<tr>								
-								<td><a href="receita0.html">Receita Exemplo</a></td>								
-								<td><button id="btn-atualizar" class="btn-icon"><img class="icone" src="img/refresh-button.png" alt="Atualizar" />  </button></td>
-								<td><button id="btn-excluir" class="btn-icon"><img class="icone" src="img/garbage.png" alt="Lixeira" /></button></td>
-							</tr>
-						</table>
-					
-					</div>
-
+					<form method="post" action="resultado-user.html">
+						<div>
+							<input id=input-pesquisa type="text" name="ingredientes"
+								placeholder="Ingredientes " required />
+							<button type="submit" id="btn-pesquisa">Buscar</button>
+							<br />
+						</div>
+					</form>
 				</div>
-			</form>
+			</div>
+			<br/>
+			<div class="texto-simples container">
+				<div class="box-imagem">
+					<h2>Bolo de Cenoura</h2><br/>
+					<figure><img class="foto" src="img/receita-teste.png" alt="Receita"/></figure>
+					<h3>Ingredientes</h3><br/>
+					<h3>Modo de preparo</h3><br/>
+										
+				</div>
+			</div>			
+			<br />
+			
 		</div>
 	</section>
+
 
 	<footer>
 		<div>
