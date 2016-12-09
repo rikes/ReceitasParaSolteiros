@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class CadastroController {
     @RequestMapping(value = "cadastro", method = RequestMethod.GET)
-    public ModelAndView messages() {
+    public ModelAndView load() {
         ModelAndView mav = new ModelAndView("cadastro");
         return mav;
     }

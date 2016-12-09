@@ -10,7 +10,13 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class InicioController {
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public ModelAndView messages() {
+    public ModelAndView loadVazio() {
+        ModelAndView mav = new ModelAndView("inicio");
+        return mav;
+    }
+
+    @RequestMapping(value = "inicio", method = RequestMethod.GET)
+    public ModelAndView load() {
         ModelAndView mav = new ModelAndView("inicio");
         return mav;
     }

@@ -1,7 +1,17 @@
 package br.edu.ifes.controller;
 
-/**
- * Created by amand on 09/12/2016.
- */
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RestController
 public class FaleConoscoController {
+    @RequestMapping(value = "fale-conosco", method = RequestMethod.GET)
+    public ModelAndView load() {
+        ModelAndView mav = new ModelAndView("fale-conosco" );
+        return mav;
+    }
 }

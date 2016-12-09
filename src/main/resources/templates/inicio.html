@@ -15,9 +15,11 @@
 </head>
 
 <body>
-<div th:replace="fragments/header :: header">
-    <p>header</p>
-</div>
+<header>
+    <div th:replace="fragments/header :: header">
+        <p>header</p>
+    </div>
+</header>
 
 <section>
     <div class="container-fluid text-center">
@@ -53,9 +55,11 @@
     <br/>
 </section>
 
-<div th:replace="fragments/footer :: footer">
-    <p>footer</p>
-</div>
-</body>
+<footer>
+    <div th:replace="fragments/footer :: footer">
+        <p>footer</p>
+    </div>
+</footer>
 
+</body>
 </html>
