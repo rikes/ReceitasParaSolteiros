@@ -31,10 +31,11 @@
                 <h3>Faça receitas com ingredientes que você possui em sua casa</h3>
                 <p>Digite os ingredientes separados por ponto e virgula ;</p>
 
-                <form method="post" action="resultado.html">
+                <!--/*@thymesVar id="ingrediente" type="Ingrediente"*/-->
+                <form method="get" th:object="${ingrediente}" th:action="@{/resultado}">
                     <div>
                         <input id="input-pesquisa" type="text" name="ingredientes" placeholder="Ingredientes "
-                               th:required="required"/>
+                               th:required="required" th:field="*{valor}"/>
                         <button type="submit" id="btn-pesquisa">Buscar</button>
                         <br/>
                     </div>
@@ -47,7 +48,7 @@
     <div class="texto-simples container">
         <div class="box-imagem">
             <h2>Mais Acessadas</h2>
-            <a href="receita.html">
+            <a th:href="@{/receita}">
                 <img class="foto" src="img/receita-teste.png" alt="Mais acessadas"/>
             </a>
         </div>

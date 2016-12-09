@@ -17,7 +17,7 @@ public class SpringMvcConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/", "/home","/index", "/cadastro", "/esqueci-senha", "/fale-conosco",
-                        "/inicio", "/receita", "/resultado", "/sobre-nos")
+                        "/inicio", "/receita", "/resultado", "/sobre-nos", "/img")
                 .permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -33,6 +33,6 @@ public class SpringMvcConfiguration extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER");
+                .withUser("user@user.com").password("password").roles("USER");
     }
 }
