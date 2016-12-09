@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet"
+          th:href="@{css/bootstrap.css}"/>
+    <link href="../static/css/geral.css" rel="stylesheet" media="all"
+          th:href="@{css/geral.css}"/>
+
+    <script type="text/javascript" src="js/inicio.js"></script>
+</head>
+<body>
+<div th:fragment="footer">
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <div>
+                <h3>Conecte-se conosco</h3>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-copyright">
+                <small> Direitos Reservados 2016</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

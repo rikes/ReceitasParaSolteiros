@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet"
+          th:href="@{css/bootstrap.css}"/>
+    <link href="../static/css/geral.css" rel="stylesheet" media="all"
+          th:href="@{css/geral.css}"/>
+
+    <script type="text/javascript" src="js/inicio.js"></script>
+
+    <link rel="icon" type="image/png" href="../static/img/Mt-cookbook.png" th:href="@{img/Mt-cookbook.png}"/>
+</head>
+<body>
+<div th:fragment="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="inicio.html"> <img class="logo" src="img/Mt-cookbook.png" alt="Receitas para Solteiros"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="inicio.html">Receitas para
+                        Solteiros</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="fale-conosco.html">Fale Conosco</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="user"> <span class="glyphicon glyphicon-user"></span> Usuário
+                        </a>
+                    </li>
+                    <li><a href="login.html"><span
+                            class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>
