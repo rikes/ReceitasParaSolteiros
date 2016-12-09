@@ -1,96 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Início</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/geral.css" rel="stylesheet" media="all" />
-	<script type="text/javascript" src="js/inicio.js"></script>
+    <title>Início</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet"
+          th:href="@{css/bootstrap.css}"/>
+    <link href="../static/css/geral.css" rel="stylesheet" media="all"
+          th:href="@{css/geral.css}"/>
 
-	<link rel="icon" type="image/png" href="img/Mt-cookbook.png" />
+    <script type="text/javascript" src="js/inicio.js"></script>
+
+    <link rel="icon" type="image/png" href="../static/img/Mt-cookbook.png" th:href="@{img/Mt-cookbook.png}"/>
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a href="inicio.html"> <img class="logo" src="img/Mt-cookbook.png" alt="Receitas para Solteiros">
-					</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="inicio.html">Receitas para
-								Solteiros</a></li>
-						<li><a href="cadastro.html">Cadastro</a></li>
-						<li><a href="fale-conosco.html">Fale Conosco</a></li>
-						<li><a href="sobre-nos.html">Sobre nós</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a id="user"> <span class="glyphicon glyphicon-user"></span> Usuário
-							</a>
-						</li>
-						<li><a href="login.html"><span
-								class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+<header>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="inicio.html"> <img class="logo" src="img/Mt-cookbook.png" alt="Receitas para Solteiros"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="inicio.html">Receitas para
+                        Solteiros</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="fale-conosco.html">Fale Conosco</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="user"> <span class="glyphicon glyphicon-user"></span> Usuário
+                        </a>
+                    </li>
+                    <li><a href="login.html"><span
+                            class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
-	<section>
-		<div class="container-fluid text-center">
-			<div class="row content">
-				<div class="col-sm-10 text-left">
-					<h1>Bem vindo</h1>
-					<p></p>
-					<hr>
-					<h3>Faça receitas com ingredientes que você possui em sua casa</h3>
-					<p>Digite os ingredientes separados por ponto e virgula ;</p>
+<section>
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-10 text-left">
+                <h1>Bem vindo</h1>
+                <p></p>
+                <hr/>
+                <h3>Faça receitas com ingredientes que você possui em sua casa</h3>
+                <p>Digite os ingredientes separados por ponto e virgula ;</p>
 
-					<form method="post" action="resultado.html">
-						<div>
-							<input id=input-pesquisa type="text" name="ingredientes" placeholder="Ingredientes " required />
-							<button type="submit" id="btn-pesquisa">Buscar</button>
-							<br />
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+                <form method="post" action="resultado.html">
+                    <div>
+                        <input id="input-pesquisa" type="text" name="ingredientes" placeholder="Ingredientes "
+                               th:required="required"/>
+                        <button type="submit" id="btn-pesquisa">Buscar</button>
+                        <br/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-		<br />
-		<div class="texto-simples container">
-			<div class="box-imagem">
-				<h2>Mais Acessadas</h2>
-				<a href="receita.html">
-					<img class="foto" src="img/receita-teste.png" alt="Mais acessadas" />
-				</a>
-			</div>
-		</div>
-		<br/>
-	</section>
+    <br/>
+    <div class="texto-simples container">
+        <div class="box-imagem">
+            <h2>Mais Acessadas</h2>
+            <a href="receita.html">
+                <img class="foto" src="img/receita-teste.png" alt="Mais acessadas"/>
+            </a>
+        </div>
+    </div>
+    <br/>
+</section>
 
-	<footer>
-		<div>
-			<h3>Conecte-se conosco</h3>
-		</div>
-		<div>
-			<nav>
-				<ul>
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Linkedin</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="footer-copyright">
-			<small> Direitos Reservados 2016 </small>
-		</div>
-	</footer>
+<footer>
+    <div>
+        <h3>Conecte-se conosco</h3>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Linkedin</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="footer-copyright">
+        <small> Direitos Reservados 2016</small>
+    </div>
+</footer>
 </body>
 
 </html>

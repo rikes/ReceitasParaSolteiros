@@ -16,7 +16,7 @@ public class SpringMvcConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/index", "/cadastro", "/esqueci-senha", "/fale-conosco",
+                .antMatchers("/", "/home","/index", "/cadastro", "/esqueci-senha", "/fale-conosco",
                         "/inicio", "/receita", "/resultado", "/sobre-nos")
                 .permitAll()
                 .anyRequest().authenticated()
